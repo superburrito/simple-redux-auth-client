@@ -29,6 +29,13 @@ export const signInUser = ({ email, password }) => {
 	}
 }
 
+export const signOutUser = () => {
+	localStorage.removeItem('token');
+	return {
+		type: UNAUTH_USER
+	}
+}
+
 export const createAuthError = (error) => {
 	return {
 		type: AUTH_ERROR,

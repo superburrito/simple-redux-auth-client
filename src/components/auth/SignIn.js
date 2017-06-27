@@ -9,14 +9,14 @@ class SignIn extends Component {
 		const { touched, error } = meta;
 		const divClassName = `form-group ${touched} && ${error} ? 'has-danger' : ''`;
 		return (
-			<div className={divClassName}>
-				<label>{field.label}</label>
+			<div className={ divClassName }>
+				<label>{ field.label }</label>
 				<input 
 					className="form-control"
-					type={field.type || "text"}
-					{...field.input} 
+					type={ field.type || "text" }
+					{ ...field.input } 
 				/>
-				{touched ? error : ''} 
+				{ touched ? error : '' } 
 			</div> 
 		);
 	}
@@ -30,7 +30,7 @@ class SignIn extends Component {
 		if (errorMsg) {
 			return (
 				<div className="alert alert-danger">
-					{errorMsg}
+					{ errorMsg }
 				</div>
 			)
 		}
@@ -48,16 +48,16 @@ class SignIn extends Component {
 					label="Email"
 					name="email"
 					type="text"
-					component={this.renderField}
+					component={ this.renderField }
 				/>
 				<Field 
 					className="form-group"
 					label="Password" 
 					name="password"
 					type="password"
-					component={this.renderField}
+					component={ this.renderField }
 				/>
-				{this.renderAlert()}
+				{ this.renderAlert() }
 				<button 
 					className="btn btn-primary"
 					action="submit">
